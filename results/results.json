@@ -839,7 +839,7 @@
       },
       "component_learned_student": {
         "accuracy": 0.7407407407407407,
-        "macro_f1": 0.739210497105234
+        "macro_f1": 0.7392104971052339
       },
       "main_ensemble": {
         "accuracy": 0.8148148148148148,
@@ -986,5 +986,5 @@
       }
     ]
   },
-  "elapsed_seconds": 72.79
+  "elapsed_seconds": 3.31
 }

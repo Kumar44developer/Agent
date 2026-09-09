@@ -2,7 +2,7 @@
 
 - Backend: `heuristic` | Judge: `heuristic_judge` | train threads: 2600 | golden: 200
 
-- Total eval time: **72.79s**
+- Total eval time: **3.31s**
 
 
 ## 1. Intent classification
