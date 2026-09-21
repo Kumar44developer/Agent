@@ -249,11 +249,11 @@ def main():
         "judge_agreement": judge_res,
         "elapsed_seconds": round(elapsed, 2),
     }
-    with open(os.path.join(RESULTS_DIR, "results.json"), "w") as f:
+    with open(os.path.join(RESULTS_DIR, "results.json"), "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
 
     # confusion matrix file
-    with open(os.path.join(RESULTS_DIR, "confusion_main.txt"), "w") as f:
+    with open(os.path.join(RESULTS_DIR, "confusion_main.txt"), "w", encoding="utf-8") as f:
         f.write("Main model (ensemble) confusion matrix (rows=true, cols=pred)\n\n")
         f.write(M.format_confusion(intent_res["_confusion_main"], INTENTS))
         f.write("\n")
@@ -367,7 +367,7 @@ def _write_markdown(results, intent_res, esc_res):
         for d in ja["disagreements"]:
             a(f"- human={d['human']} judge={d['judge']} — “{d['text'][:60]}…” → “{d['reply'][:60]}…”")
 
-    with open(os.path.join(RESULTS_DIR, "summary.md"), "w") as f:
+    with open(os.path.join(RESULTS_DIR, "summary.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
 
 
